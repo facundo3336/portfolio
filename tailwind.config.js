@@ -14,6 +14,7 @@ export default {
         'primary': '#5c546b',
         'violet': '#CDBCEB',
         'strongViolet': '#8E82A4',
+        'strongerViolet': '#292D44'
       },
       fontFamily: {
         'retro': ['Pixelify Sans'],

@@ -7,7 +7,7 @@ export const Title = ({ titleText, textBeforeTitle }: Props) => {
   return (
     <div className="uppercase text-strongViolet font-semibold">
       <span className="sm:text-xl ">{textBeforeTitle}</span>
-      <h1 className="text-violet text-4xl sm:text-7xl m-0 -ml-1">
+      <h1 className="text-violet text-4xl sm:text-5xl lg:text-7xl m-0 -ml-1">
         {titleText}
       </h1>
     </div>

@@ -3,7 +3,12 @@ import { Container } from "../Container/Container";
 
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
-  const navItems = ["About", "Project", "Skills", "Contact"];
+  const navItems = [
+    { name: "About", link: "about" },
+    { name: "Projects", link: "projects" },
+    { name: "Skills", link: "skills" },
+    { name: "Contact", link: "contact" },
+  ];
 
   const navClass = isNavOpen ? "translate-x-0" : "-translate-x-full";
 
@@ -15,18 +20,25 @@ export const Header = () => {
     <header className="pt-7 text-lg bg-gradient-to-t from-transparent to-black relative">
       <Container>
         <div className="align-center flex justify-between">
-          <img
-            src="./portfolio.png"
-            alt=""
-            className="w-16 h-16 rounded-full"
-          />
+          <a href="#">
+            <img
+              src="./portfolio.png"
+              alt=""
+              className="w-16 h-16 rounded-full"
+            />
+          </a>
           <nav className="hidden  md:flex flex-col justify-center">
             <ul className="text-red-500  flex gap-10  align-middle">
               {navItems.map((i) => {
                 return (
-                  <li key={i} className="text-white">
-                    {i}
-                  </li>
+                  <a
+                    className="hover:text-violet text-white"
+                    href={`#${i.link}`}
+                  >
+                    <li key={i.name} className="">
+                      {i.name}
+                    </li>
+                  </a>
                 );
               })}
             </ul>
@@ -34,7 +46,10 @@ export const Header = () => {
         </div>
       </Container>
       {isNavOpen && (
-        <div className="md:hidden fixed bg-transparent-black top-0 bottom-0 left-0 right-0 w-screen h-screen flex justify-start"></div>
+        <div
+          onClick={clickNav}
+          className="md:hidden fixed bg-transparent-black top-0 bottom-0 left-0 right-0 w-screen h-screen flex justify-start"
+        ></div>
       )}
       <nav
         className={`md:hidden fixed top-0 bottom-0 h-screen bg-black w-80 -left-10 ${navClass} transition-transform duration-100 p-10 z-20`}
@@ -42,9 +57,15 @@ export const Header = () => {
         <ul className="text-red-500  flex flex-col gap-10 justify-end p-10">
           {navItems.map((i) => {
             return (
-              <li key={i} className="text-white">
-                {i}
-              </li>
+              <a
+                onClick={clickNav}
+                className="hover:text-violet text-white"
+                href={`#${i.link}`}
+              >
+                <li key={i.name} className="">
+                  {i.name}
+                </li>
+              </a>
             );
           })}
         </ul>
