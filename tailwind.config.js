@@ -32,6 +32,7 @@ export default {
       fontSize: {
         xxl: '10rem'
       },
+      
       keyframes: {
         rubberband: {
           '0%': { transform: 'scale(1)' },
@@ -41,10 +42,56 @@ export default {
           '75%': { transform: 'scale(.9, 1)' },
           '90%': { transform: 'scale(1.05, .95)' },
           '100%': { transform: 'scale(1, 1)' }
+        },
+        float: {
+          '0%': {
+            boxShadow: '0 5px 15px 0px rgba(0,0,0,0.6)',
+            transform: 'translatey(0px)'
+          },
+          '50%': {
+            boxShadow: '0 25px 15px 0px rgba(0,0,0,0.2)',
+            transform: 'translatey(-20px)'
+          },
+          '100%': {
+            boxShadow: '0 5px 15px 0px rgba(0,0,0,0.6)',
+            transform: 'translatey(0px)'
+          }
+        },
+        scrollLeft: {
+          '0%': {
+            transform: 'translateX(0%)'
+          },
+          '100%': {
+            transform: 'translateX(-100%)'
+          }
+        },
+        scrollRight: {
+          '0%': {
+            transform: 'translateX(-100%)'
+          },
+          '100%': {
+            transform: 'translateX(0%)'
+          }
+        },
+        swing: {
+          '0': {
+            transform: 'rotate(0deg)'
+          },
+          '50%': {
+            transform: 'rotate(5deg)'
+          },
+          '100%': {
+            transform: 'rotate(0deg)'
+          }
         }
       },
       animation: {
         rubberband: 'rubberband 0.8s ease-out',
+        float: 'float 6s ease-in-out infinite',
+        scrollLeft: 'scrollLeft 6s linear infinite',
+        scrollRight: 'scrollRight 6s linear infinite',
+        swing: 'swing 1s linear infinite'
+
       },
       dropShadow: {
         'text-shadow-sm': '0 0 5rem rgba(41, 45, 68, 1)',

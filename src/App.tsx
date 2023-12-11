@@ -1,5 +1,6 @@
 import "./App.css";
 import { Card } from "./components/Card/Card";
+import { Carousel } from "./components/Carousel/Carousel";
 import { Container } from "./components/Container/Container";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
@@ -13,7 +14,7 @@ function App() {
         <Header />
       </div>
       <section>
-        <Container>
+        <Container mobilePadding>
           <div className="min-h-screen flex flex-col justify-center">
             <div className="drop-shadow-text-shadow sm:drop-shadow-text-shadow-sm">
               <div className="text-white text-5xl drop-shadow-text-shadow sm:drop-shadow-text-shadow-sm sm:text-8xl md:text-9xl lg:text-xxl font-retro flex flex-col justify-center align-middle w-fit m-auto ">
@@ -56,7 +57,7 @@ function App() {
         </Container>
       </section>
       <section id="about">
-        <Container>
+        <Container mobilePadding>
           <div>
             <Title textBeforeTitle="Introduction" titleText="About me" />
             <div className="md:flex md:items-center md:gap-10 md:pt-16 md:justify-between text-sm md:text-base lg:text-lg">
@@ -88,7 +89,7 @@ function App() {
         </Container>
       </section>
       <section id="projects">
-        <Container>
+        <Container mobilePadding>
           <div className="pt-24 md:pt-48">
             <Title
               textBeforeTitle="What I have done so far"
@@ -133,9 +134,17 @@ function App() {
           </div>
         </Container>
       </section>
-      <section id="skills"></section>
+      <section id="skills" className="pt-20 md:pt-32">
+        <Container mobilePadding={false}>
+          <div className="px-9 sm:px-0 pb-2 sm:pb-16 lg:pb-24">
+            <Title textBeforeTitle="what I do" titleText="Skills" />
+          </div>
+          <Carousel scrollFrom="Left" />
+          <Carousel scrollFrom="Right" />
+        </Container>
+      </section>
       <section id="contact" className="py-24 md:pt-40">
-        <Container>
+        <Container mobilePadding>
           <Title titleText="Contact" textBeforeTitle="get in touch" />
           <div className="grid gap-12 pt-20 md:grid-cols-2 lg:grid-cols-3">
             <Card

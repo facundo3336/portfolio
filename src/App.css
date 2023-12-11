@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+
+ #animatedFather:hover #animatedItem {
+    animation-play-state: paused;
+ } 
+
 body {
     min-height: 100vh;
     font-family: 'Mali';

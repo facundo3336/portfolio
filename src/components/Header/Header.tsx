@@ -32,12 +32,11 @@ export const Header = () => {
               {navItems.map((i) => {
                 return (
                   <a
+                    key={i.name}
                     className="hover:text-violet text-white"
                     href={`#${i.link}`}
                   >
-                    <li key={i.name} className="">
-                      {i.name}
-                    </li>
+                    <li className="">{i.name}</li>
                   </a>
                 );
               })}
@@ -58,13 +57,12 @@ export const Header = () => {
           {navItems.map((i) => {
             return (
               <a
+                key={i.name}
                 onClick={clickNav}
                 className="hover:text-violet text-white"
                 href={`#${i.link}`}
               >
-                <li key={i.name} className="">
-                  {i.name}
-                </li>
+                <li className="">{i.name}</li>
               </a>
             );
           })}
