@@ -18,14 +18,14 @@ function App() {
           <div className="min-h-screen flex flex-col justify-center">
             <div className="drop-shadow-text-shadow sm:drop-shadow-text-shadow-sm">
               <div className="text-white text-5xl drop-shadow-text-shadow sm:drop-shadow-text-shadow-sm sm:text-8xl md:text-9xl lg:text-xxl font-retro flex flex-col justify-center align-middle w-fit m-auto ">
-                <div className="flex justify-center align-middle">
+                <div className="flex justify-center align-middle animate-fadeInLeft">
                   <span className="cursor-default">W</span>
                   <span className="cursor-default">H</span>
                   <span className="cursor-default">O</span>
                   <span className="cursor-default">'</span>
                   <span className="cursor-default">S</span>
                 </div>
-                <div className="flex justify-center align-middle">
+                <div className="flex justify-center align-middle animate-fadeInRight">
                   <span className="hover:animate-rubberband inline-block text-violet cursor-default ">
                     F
                   </span>
@@ -61,12 +61,12 @@ function App() {
           <div>
             <Title textBeforeTitle="Introduction" titleText="About me" />
             <div className="md:flex md:items-center md:gap-10 md:pt-16 md:justify-between text-sm md:text-base lg:text-lg">
-              <img
-                src="./personal-photo.jpg"
-                alt="Facundo Cabral image"
-                className="sm:h-64 md:m-0  rounded-2xl mt-10 md:order-2 h-40 lg:h-72"
-              />
-              <div className="flex flex-col gap-6 pt-9 md:pt-0 lg:max-w-xl">
+              <div className="md:order-2 animate-fadeInRight">
+                <div className="animate-morph  overflow-hidden sm:h-64 h-40 lg:h-72 md:m-0 mt-10 w-60 sm:w-80  md:h-60 lg:w-96 xl:h-80 xl:w-[27rem]">
+                  <img src="./personal-photo.jpg" alt="Facundo Cabral image" />
+                </div>
+              </div>
+              <div className="flex flex-col gap-6 pt-9 md:max-w-xs md:pt-0 lg:max-w-sm xl:max-w-lg animate-fadeInLeft">
                 <p className="text-violet">
                   Hello there, I'm so happy you are here!
                 </p>

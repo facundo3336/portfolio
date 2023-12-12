@@ -83,15 +83,60 @@ export default {
           '100%': {
             transform: 'rotate(0deg)'
           }
-        }
+        },
+        morph: {
+          '0%, 100%': {
+            borderRadius: '40% 60% 70% 30%/40% 40% 60% 50%'
+          },
+          '34%': {
+            borderRadius: '70% 30% 50% 50%/30% 30% 70% 70%'
+          },
+          '67%': {
+            borderRadius: '100% 60% 60% 100%/100% 100% 60% 60%'
+          },
+        },
+        fadeInLeft: {
+          '0%': {
+             opacity: '0',
+             transform: 'translateX(-40px)'
+          },
+          '100%': {
+             opacity: '1',
+             transform: 'translateX(0)'
+          }
+        },
+        fadeInRight: {
+          '0%': {
+             opacity: '0',
+             transform: 'translateX(40px)'
+          },
+          '100%': {
+             opacity: '1',
+             transform: 'translateX(0)',
+          }
+        },
+        fadeIn: {
+          '0%': {
+             opacity: '0',
+          },
+          '50%': {
+            opacity: '.5'
+          },
+          '100%': {
+             opacity: '1',
+          }
+       }           
       },
       animation: {
         rubberband: 'rubberband 0.8s ease-out',
         float: 'float 6s ease-in-out infinite',
-        scrollLeft: 'scrollLeft 6s linear infinite',
-        scrollRight: 'scrollRight 6s linear infinite',
-        swing: 'swing 1s linear infinite'
-
+        scrollLeft: 'scrollLeft 10s linear infinite',
+        scrollRight: 'scrollRight 10s linear infinite',
+        swing: 'swing 1s linear infinite',
+        morph: 'morph 3.6s linear infinite',
+        fadeInLeft: 'fadeInLeft 1s',
+        fadeInRight: 'fadeInRight 1s',
+        fadeIn: 'fadeIn .7s'
       },
       dropShadow: {
         'text-shadow-sm': '0 0 5rem rgba(41, 45, 68, 1)',

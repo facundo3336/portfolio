@@ -9,7 +9,7 @@ interface Props {
 
 export const Card = ({ title, link, linkText, description }: Props) => {
   return (
-    <div className="rounded-lg overflow-hidden shadow-2xl max-w-sm md:mx-auto animate-float">
+    <div className="rounded-lg overflow-hidden shadow-2xl max-w-sm md:mx-auto animate-fadeIn">
       <h2 className="bg-violet text-white text-lg md:text-2xl lg:text-4xl font-semibold p-4 text-center">
         {title}
       </h2>

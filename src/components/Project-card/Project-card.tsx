@@ -16,7 +16,7 @@ export const ProjectCard = ({
   buttonText,
 }: Props) => {
   return (
-    <div className="text-white flex flex-col gap-7 max-w-sm md:max-w-xs">
+    <div className="text-white flex flex-col gap-7 max-w-sm md:max-w-xs animate-fadeIn">
       <img src={imageUrl} alt="image" className=" w-48 h-48 rounded-md" />
       <h3 className="text-2xl font-semibold">{title}</h3>
       <p className="text-sm">{children}</p>
