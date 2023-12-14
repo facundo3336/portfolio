@@ -1,7 +1,11 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-export const Footer = () => {
+interface Props {
+  text: string;
+}
+
+export const Footer = ({ text }: Props) => {
   return (
     <footer className="bg-black p-10">
       <div className="flex justify-center gap-5">
@@ -27,9 +31,7 @@ export const Footer = () => {
           <FaLinkedin />
         </a>
       </div>
-      <span className="text-white text-sm block text-center pt-8">
-        Made by Facundo Cabral
-      </span>
+      <span className="text-white text-sm block text-center pt-8">{text}</span>
     </footer>
   );
 };

@@ -28,6 +28,7 @@ export const Carousel = ({ scrollFrom }: Props) => {
           <RotatedCard title="Jira" imageUrl="./jira.png" />
           <RotatedCard title="Trello" imageUrl="./trello.png" />
           <RotatedCard title="Postman" imageUrl="./postman.png" />
+          <RotatedCard title="Tailwind" imageUrl="./tailwind.webp" />
         </div>
 
         <div
@@ -44,6 +45,7 @@ export const Carousel = ({ scrollFrom }: Props) => {
           <RotatedCard title="Jira" imageUrl="./jira.png" />
           <RotatedCard title="Trello" imageUrl="./trello.png" />
           <RotatedCard title="Postman" imageUrl="./postman.png" />
+          <RotatedCard title="Tailwind" imageUrl="./tailwind.webp" />
         </div>
       </div>
       <div className="h-px bg-violet absolute top-12 w-full z-10"></div>

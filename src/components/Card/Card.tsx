@@ -5,11 +5,22 @@ interface Props {
   linkText: string;
   link: string;
   description: string;
+  isCardVisible: boolean;
 }
 
-export const Card = ({ title, link, linkText, description }: Props) => {
+export const Card = ({
+  title,
+  link,
+  linkText,
+  description,
+  isCardVisible,
+}: Props) => {
   return (
-    <div className="rounded-lg overflow-hidden shadow-2xl max-w-sm md:mx-auto animate-fadeIn">
+    <div
+      className={`rounded-lg overflow-hidden shadow-2xl max-w-sm md:mx-auto ${
+        isCardVisible && "animate-fadeIn"
+      }`}
+    >
       <h2 className="bg-violet text-white text-lg md:text-2xl lg:text-4xl font-semibold p-4 text-center">
         {title}
       </h2>

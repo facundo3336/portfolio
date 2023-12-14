@@ -10,8 +10,6 @@ export const Title = ({ titleText, textBeforeTitle }: Props) => {
   const titleRef = useRef<HTMLDivElement>(null);
   const isVisible = useIntersectionObserver({ ref: titleRef });
 
-  console.log(isVisible);
-
   return (
     <div
       ref={titleRef}
@@ -20,7 +18,7 @@ export const Title = ({ titleText, textBeforeTitle }: Props) => {
       }`}
     >
       <span className="sm:text-xl ">{textBeforeTitle}</span>
-      <h1 className="text-violet text-4xl sm:text-5xl lg:text-7xl m-0 -ml-1">
+      <h1 className="text-violet text-3xl sm:text-5xl lg:text-7xl m-0 -ml-1">
         {titleText}
       </h1>
     </div>

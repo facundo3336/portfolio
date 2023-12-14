@@ -1,13 +1,28 @@
 import React from "react";
 import { Container } from "../Container/Container";
+import { Button } from "../Button/Button";
 
-export const Header = () => {
+interface Props {
+  navAbout: string;
+  navProjects: string;
+  navSkills: string;
+  navContact: string;
+  onClickFlagButton: () => void;
+}
+
+export const Header = ({
+  navAbout,
+  navContact,
+  navSkills,
+  navProjects,
+  onClickFlagButton,
+}: Props) => {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
   const navItems = [
-    { name: "About", link: "about" },
-    { name: "Projects", link: "projects" },
-    { name: "Skills", link: "skills" },
-    { name: "Contact", link: "contact" },
+    { name: navAbout, link: "about" },
+    { name: navProjects, link: "projects" },
+    { name: navSkills, link: "skills" },
+    { name: navContact, link: "contact" },
   ];
 
   const navClass = isNavOpen ? "translate-x-0" : "-translate-x-full";
@@ -27,13 +42,13 @@ export const Header = () => {
               className="w-16 h-16 rounded-full"
             />
           </a>
-          <nav className="hidden  md:flex flex-col justify-center">
+          <nav className="hidden  md:flex items-center justify-center">
             <ul className="text-red-500  flex gap-10  align-middle">
               {navItems.map((i) => {
                 return (
                   <a
                     key={i.name}
-                    className="hover:text-violet text-white"
+                    className="hover:text-violet border-b-[1px] border-transparent text-white hover:border-b-[1px] hover:border-violet"
                     href={`#${i.link}`}
                   >
                     <li className="">{i.name}</li>
@@ -41,6 +56,9 @@ export const Header = () => {
                 );
               })}
             </ul>
+            <div className="flex items-center ml-10">
+              <Button onClick={onClickFlagButton} type="language"></Button>
+            </div>
           </nav>
         </div>
       </Container>
@@ -66,6 +84,9 @@ export const Header = () => {
               </a>
             );
           })}
+          <div className=" flex justify-start">
+            <Button onClick={onClickFlagButton} type="language"></Button>
+          </div>
         </ul>
       </nav>
       <button

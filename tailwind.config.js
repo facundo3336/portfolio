@@ -8,6 +8,8 @@ export default {
     extend: {
       backgroundImage: {
         'dots-background': "url('/background.png')",
+        'spainFlag': "url('./spain_flag.png')",
+        'ukFlag': "url('./uk_flag.jpg')"
       },
       colors: {
         'transparent-black': "rgba(0, 0, 0, 0.5)",
@@ -125,18 +127,27 @@ export default {
           '100%': {
              opacity: '1',
           }
-       }           
+        } ,
+        zoom: {
+          '0%': {
+            backgroundSize: '110% 110%'
+          },
+          '100%': {
+            backgroundSize: '100% 100%'
+          }
+        }          
       },
       animation: {
         rubberband: 'rubberband 0.8s ease-out',
         float: 'float 6s ease-in-out infinite',
-        scrollLeft: 'scrollLeft 10s linear infinite',
-        scrollRight: 'scrollRight 10s linear infinite',
+        scrollLeft: 'scrollLeft 13s linear infinite',
+        scrollRight: 'scrollRight 13s linear infinite',
         swing: 'swing 1s linear infinite',
         morph: 'morph 3.6s linear infinite',
         fadeInLeft: 'fadeInLeft 1s',
         fadeInRight: 'fadeInRight 1s',
-        fadeIn: 'fadeIn .7s'
+        fadeIn: 'fadeIn .7s',
+        zoom: 'zoom .5s'
       },
       dropShadow: {
         'text-shadow-sm': '0 0 5rem rgba(41, 45, 68, 1)',
