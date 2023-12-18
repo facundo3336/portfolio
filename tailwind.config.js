@@ -76,7 +76,7 @@ export default {
           }
         },
         swing: {
-          '0': {
+          '0%': {
             transform: 'rotate(0deg)'
           },
           '50%': {
