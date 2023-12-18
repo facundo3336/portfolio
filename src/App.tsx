@@ -133,7 +133,7 @@ function App() {
                 title="Avocode"
                 buttonText={DICTIONARIES[language].Box1ButtonText}
                 buttonLink="https://avocode.io"
-                imageUrl="/avocode.ico"
+                imageUrl="./avocode.ico"
               >
                 {DICTIONARIES[language].Box1Text}
               </ProjectCard>
@@ -142,7 +142,7 @@ function App() {
                 title="Eshop"
                 buttonText={DICTIONARIES[language].Box2ButtonText}
                 buttonLink="https://github.com/facundo3336/account-portal"
-                imageUrl="/shop.png"
+                imageUrl="./shop.png"
               >
                 {DICTIONARIES[language].Box2Text}
               </ProjectCard>
@@ -151,7 +151,7 @@ function App() {
                 title="Pokedex"
                 buttonText={DICTIONARIES[language].Box3ButtonText}
                 buttonLink="https://github.com/facundo3336/pokedex"
-                imageUrl="/pokedex.webp"
+                imageUrl="./pokedex.webp"
               >
                 {DICTIONARIES[language].Box3Text}
               </ProjectCard>

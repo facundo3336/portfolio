@@ -8,8 +8,8 @@ export default {
     extend: {
       backgroundImage: {
         'dots-background': "url('/background.png')",
-        'spainFlag': "url('./spain_flag.png')",
-        'ukFlag': "url('./uk_flag.jpg')"
+        'spainFlag': "url('/spain_flag.png')",
+        'ukFlag': "url('/uk_flag.jpg')"
       },
       colors: {
         'transparent-black': "rgba(0, 0, 0, 0.5)",
